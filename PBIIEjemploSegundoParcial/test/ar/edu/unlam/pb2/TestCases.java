@@ -10,7 +10,7 @@ public class TestCases {
 	public void queSePuedaCrearUnAuto() {
 		Auto nuevo = new Auto("JJZ526", 5, 240, 41.40338, 2.17403);
 
-		assertEquals("JJZ526", nuevo.getPatente());
+		assertEquals("JJZ56", nuevo.getPatente());
 		assertEquals((Integer) 5, nuevo.getCantidadMaximaDePasajeros());
 		assertEquals((Integer) 240, nuevo.getVelocidadMaxima());
 		assertEquals((Double) 41.40338, nuevo.getLatitud());
@@ -66,7 +66,7 @@ public class TestCases {
 			actual.agregarVehiculo(new Tren(15, 250, 100, 45.826541, 3.965412));
 
 			assertEquals((Integer) 10, actual.getCantidadDeVehiculos());
-			assertFalse(actual.hayCoalición());
+			assertFalse(actual.hayCoaliciï¿½n());
 	}
 	
 	@Test (expected = ColitionException.class)
@@ -82,7 +82,7 @@ public class TestCases {
 
 		
 		unAuto.actualizarCoordenadas(25.1234, 1.1234);
-		assertTrue(actual.hayCoalición());
+		assertTrue(actual.hayCoaliciï¿½n());
 		
 	}
 }
